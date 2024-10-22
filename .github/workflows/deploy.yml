@@ -11,14 +11,14 @@ jobs:
     environment: testing
     runs-on: ubuntu-latest
     container:
-       image: node:16
+      image: node:16
 
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
       MONGODB_CLUSTER_ADDRESS: cluster0.ggvyl.mongodb
       MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
       MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
-      PORT: 3009
+      PORT: 3007
     steps:
     - name: Get Code
       uses: actions/checkout@v3
