@@ -3,7 +3,6 @@ on:
   push:
     branches:
     - main
-    - dev
 env:
   CACHE_KEY: node-deps
   MONGODB_DB_NAME: gha-demo
@@ -13,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
-      MONGODB_CLUSTER_ADDRESS: cluster0.ggvyl.mongodb.net
+      MONGODB_CLUSTER_ADDRESS: cluster0.ggvyl.mongodb
       MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
       MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 3009
