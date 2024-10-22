@@ -1,3 +1,6 @@
 {
-  "window.zoomLevel": 7
+  "window.zoomLevel": 7,
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///home/einfochips/learnings/Gitaction/docker_gitaction/.github/workflows/deploy.yml"
+  }
 }
