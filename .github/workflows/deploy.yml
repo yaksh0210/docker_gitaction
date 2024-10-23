@@ -53,10 +53,11 @@ jobs:
         echo "MONGODB_USERNAME: $MONGODB_USERNAME"
         echo "${{ env.PORT }}"
   report:
-    needs: deploy
-    if: faliure ()
+    needs: [deploy]
+    if: failure()
     runs-on: ubuntu-latest
     steps:
-    - name: There is something wrong
+    - name: Output Information
       run: |
-        echo "${{ github }}"
+        echo "Something is wrong"
+        echo "${{ toJSON(github) }}"
