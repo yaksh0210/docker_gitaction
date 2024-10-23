@@ -52,3 +52,11 @@ jobs:
         echo "MONGODB_DB_NAME: $MONGODB_DB_NAME"
         echo "MONGODB_USERNAME: $MONGODB_USERNAME"
         echo "${{ env.PORT }}"
+  report:
+    needs: deploy
+    if: faliure ()
+    runs-on: ubuntu-latest
+    steps:
+    - name: There is something wrong
+      run: |
+        echo "${{ github }}"
